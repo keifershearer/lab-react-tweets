@@ -14,7 +14,7 @@ const tweetsArray = [
   },
   {
     user: {
-      name: "Thoughts of Dog®",
+      name: "Superman",
       image: "https://i.imgur.com/b0EdHVV.jpg",
       handle: "dog_feelings",
     },
@@ -37,7 +37,13 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {tweetsArray.map(tweet => {
+        return <Tweet tweet={tweet} />
+      })
+
+      /* <Tweet tweet={tweetsArray[0]} />
+      <Tweet tweet={tweetsArray[1]} />
+      <Tweet tweet={tweetsArray[2]} /> */}
     </div>
   );
 }
